@@ -15,7 +15,7 @@ public class BootApplication {
 
     @RequestMapping("test")
     public String get(){
-        System.out.println("test ...");
+        System.out.println("haha");
         return "boot test";
     }
 
