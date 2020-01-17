@@ -19,6 +19,7 @@ public class BootApplication {
         System.out.println("55555555");
         System.out.println("55555555");
         System.out.println("55555555");
+        System.out.println("55555555");
         return "boot test";
     }
 
