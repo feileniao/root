@@ -1,15 +1,24 @@
 pipeline {
   agent any
+  triggers{
+    github(
+    triggerOnPush: true,
+    secretToken:"qweqweqweqweqweqweqweqweqw")
+  }
+  tools {
+          maven "MAVEN_HOME"
+          jdk "JAVA_HOME"
+      }
   stages {
     stage('source') {
       steps {
-        git(changelog: true, poll: true, url: 'https://github.com/feileniao/root.git', branch: 'dev', credentialsId: 'feileniao')
+        git(changelog: true, poll: true, url: 'https://github.com/feileniao/root.git', branch: 'dev')
       }
     }
 
     stage('build') {
       steps {
-        sh 'mvn clean install -Dmaven.test.skip=true'
+        sh 'mvn clean install -U -Dmaven.test.skip=true'
       }
     }
 
