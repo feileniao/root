@@ -1,7 +1,7 @@
 pipeline {
   agent any
   triggers{
-      github(
+      git(
       triggerOnPush: true,
       secretToken:"qweqweqweqweqweqweqweqweqw")
     }
