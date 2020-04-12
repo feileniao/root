@@ -1,5 +1,10 @@
 pipeline {
   agent any
+  triggers{
+      github(
+      triggerOnPush: true,
+      secretToken:"qweqweqweqweqweqweqweqweqw")
+    }
   tools {
           maven "MAVEN_HOME"
           jdk "JAVA_HOME"
