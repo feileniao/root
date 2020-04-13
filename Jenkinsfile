@@ -14,4 +14,18 @@ pipeline {
     }
 
   }
+  post{
+          always{
+              script{
+                      publishHTML (target: [
+                          allowMissing: false,
+                          alwaysLinkToLastBuild: false,
+                          keepAll: true,
+                          reportDir: '/usr/local/jenkins/test-output',
+                          reportFiles: 'index.html',
+                          reportName: "HTML Report"
+                      ])
+              }
+          }
+      }
 }
