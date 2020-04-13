@@ -21,7 +21,7 @@ pipeline {
                           allowMissing: false,
                           alwaysLinkToLastBuild: false,
                           keepAll: true,
-                          reportDir: '/usr/local/jenkins/test-output',
+                          reportDir: '/usr/local/jenkins',
                           reportFiles: 'index.html',
                           reportName: "HTML Report"
                       ])
