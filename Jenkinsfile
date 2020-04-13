@@ -1,14 +1,5 @@
 pipeline {
   agent any
-  triggers{
-      githubPush(
-      triggerOnPush: true,
-      secretToken:"qweqweqweqweqweqweqweqweqw")
-    }
-  tools {
-          maven "MAVEN_HOME"
-          jdk "JAVA_HOME"
-      }
   stages {
     stage('source') {
       steps {
